@@ -23,6 +23,8 @@ Link for this dataset: https://cds.climate.copernicus.eu/datasets/reanalysis-era
 
 For the purpose of this study, a subset of the above dataset has been used, which contains weather data for the coastal regions of Maharashtra, Goa, and Karnataka for the years `2001` to `2025`.
 
+Link: https://drive.google.com/file/d/1gjqpWTHyzhBaH1TKQiwoYFczUVhxwDqX/view?usp=sharing
+
 | Attribute | Description |
 | :---: | :---: |
 | **Location** | Latitude: `12.00°N` – `19.75°N` <br> Longitude: `72.75°E` – `75.50°E` |
