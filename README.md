@@ -15,13 +15,11 @@ Link for PyTorch Installation: https://pytorch.org/get-started/locally/
 
 ```text
 hybrid-weather-forecaster/
-├── data/
-│   ├── KC_Data_Preprocessing.py               # Data Preprocessing Code
-│   └── KC_6H_2001-2025_Final.csv              # Data for the Konkan Canara Region from 2001 - 2025 resampled to 6 hours
 ├── utils/
 │   ├── Base_Test.py                           # Basic Testing Code
 │   ├── Baseline_Model_Definitions.py          # Baseline Model Definition Code
 │   ├── Baseline_Model_Utils.py                # Baseline Model Training Code
+│   ├── KC_Data_Preprocessing.py               # Data Preprocessing Code
 │   ├── Feature_Target_Scaler_RH.ipynb         # Scaling Features and Target - Relative Humidity
 │   ├── Feature_Target_Scaler_TP.ipynb         # Scaling Features and Target - Total Precipitation
 │   ├── Feature_Target_Scaler_Temp.ipynb       # Scaling Features and Target - Temperature
