@@ -2,7 +2,60 @@
 
 A two-stage hybrid framework for generating realistic, probabilistic precipitation forecasts by combining deterministic initial forecasting with advanced U-Net spatial models.
 
-In the first stage, a deterministic model generates an initial baseline forecast using historical meteorological data. In the second stage, this baseline is concatenated with the original observed features and passed to a generative diffusion model, which functions as a probabilistic refiner by rectifying the deterministic error and providing the parameters of a Gaussian distribution (mean (`μ`) and log-variance (`log(σ²)`)) for every grid point. The U-Net model functions as the probabilistic refiner and the performance has been compared for `4` different variants of the same—the standard U-Net, residual U-Net, attention U-Net and the CBAM (Convolutional Block Attention Module) U-Net. In general, the hybrid approach significantly improved the performance of all tested deterministic models, with lower RMSE, higher ACC, and the generation of reliable probabilistic forecasts measured by CRPS. 
+In the first stage, a deterministic model generates an initial baseline forecast using historical meteorological data. In the second stage, this baseline is concatenated with the original observed features and passed to a generative diffusion model, which functions as a probabilistic refiner by rectifying the deterministic error and providing the parameters of a Gaussian distribution (mean (`μ`) and log-variance (`log(σ²)`)) for every grid point. The U-Net model functions as the probabilistic refiner and the performance has been compared for `4` different variants of the same—the standard U-Net, residual U-Net, attention U-Net and the CBAM (Convolutional Block Attention Module) U-Net. In general, the hybrid approach significantly improved the performance of all tested deterministic models, with lower RMSE, higher ACC, and the generation of reliable probabilistic forecasts measured by CRPS.
+
+## Repository Structure
+
+<details>
+<summary><b>Click to expand the repository structure</b></summary>
+
+<br>
+
+```text
+hybrid-weather-forecaster/
+├── data/
+│   ├── KC_Data_Preprocessing.py               # Data Preprocessing Code
+│   └── KC_6H_2001-2025_Final.csv              # Data for the Konkan Canara Region from 2001 - 2025 resampled to 6 hours
+├── utils/
+│   ├── Base_Test.py                           # Basic Testing Code
+│   ├── Baseline_Model_Definitions.py          # Baseline Model Definition Code
+│   ├── Baseline_Model_Utils.py                # Baseline Model Training Code
+│   ├── Feature_Target_Scaler_RH.ipynb         # Scaling Features and Target - Relative Humidity
+│   ├── Feature_Target_Scaler_TP.ipynb         # Scaling Features and Target - Total Precipitation
+│   ├── Feature_Target_Scaler_Temp.ipynb       # Scaling Features and Target - Temperature
+│   ├── Test_Plot_Codes.py                     # Code for Plotting Test Results
+│   ├── UNet_Model_Definitions.py              # U-Net Model Definition Code
+│   └── UNet_Model_Utils.py                    # U-Net Model Training Code
+├── training/
+│   ├── ElasticNet_U-Net_Hybrid_RH_Training_KC_4S.ipynb      # Elastic Net - U-Net Hybrid Training (RH - 4 Step Input)
+│   ├── ElasticNet_U-Net_Hybrid_RH_Training_KC_8S.ipynb      # Elastic Net - U-Net Hybrid Training (RH - 8 Step Input)
+│   ├── ElasticNet_U-Net_Hybrid_TP_Training_KC_4S.ipynb      # Elastic Net - U-Net Hybrid Training (TP - 4 Step Input)
+│   ├── ElasticNet_U-Net_Hybrid_TP_Training_KC_8S.ipynb      # Elastic Net - U-Net Hybrid Training (TP - 8 Step Input)
+│   ├── ElasticNet_U-Net_Hybrid_Temp_Training_KC_4S.ipynb    # Elastic Net - U-Net Hybrid Training (Temp - 4 Step Input)
+│   ├── ElasticNet_U-Net_Hybrid_Temp_Training_KC_8S.ipynb    # Elastic Net - U-Net Hybrid Training (Temp - 8 Step Input)
+│   ├── GRU_U-Net_Hybrid_RH_Training_KC_4S.ipynb             # GRU - U-Net Hybrid Training (RH - 4 Step Input)
+│   ├── GRU_U-Net_Hybrid_RH_Training_KC_8S.ipynb             # GRU - U-Net Hybrid Training (RH - 8 Step Input)
+│   ├── GRU_U-Net_Hybrid_TP_Training_KC_4S.ipynb             # GRU - U-Net Hybrid Training (TP - 4 Step Input)
+│   ├── GRU_U-Net_Hybrid_TP_Training_KC_8S.ipynb             # GRU - U-Net Hybrid Training (TP - 8 Step Input)
+│   ├── GRU_U-Net_Hybrid_Temp_Training_KC_4S.ipynb           # GRU - U-Net Hybrid Training (Temp - 4 Step Input)
+│   ├── GRU_U-Net_Hybrid_Temp_Training_KC_8S.ipynb           # GRU - U-Net Hybrid Training (Temp - 8 Step Input)
+│   ├── LSTM_U-Net_Hybrid_RH_Training_KC_4S.ipynb            # LSTM - U-Net Hybrid Training (RH - 4 Step Input)
+│   ├── LSTM_U-Net_Hybrid_RH_Training_KC_8S.ipynb            # LSTM - U-Net Hybrid Training (RH - 8 Step Input)
+│   ├── LSTM_U-Net_Hybrid_TP_Training_KC_4S.ipynb            # LSTM - U-Net Hybrid Training (TP - 4 Step Input)
+│   ├── LSTM_U-Net_Hybrid_TP_Training_KC_8S.ipynb            # LSTM - U-Net Hybrid Training (TP - 8 Step Input)
+│   ├── LSTM_U-Net_Hybrid_Temp_Training_KC_4S.ipynb          # LSTM - U-Net Hybrid Training (Temp - 4 Step Input)
+│   ├── LSTM_U-Net_Hybrid_Temp_Training_KC_8S.ipynb          # LSTM - U-Net Hybrid Training (Temp - 8 Step Input)
+│   ├── NN_U-Net_Hybrid_RH_Training_KC_4S.ipynb              # Neural Network - U-Net Hybrid Training (RH - 4 Step Input)
+│   ├── NN_U-Net_Hybrid_RH_Training_KC_8S.ipynb              # Neural Network - U-Net Hybrid Training (RH - 8 Step Input)
+│   ├── NN_U-Net_Hybrid_TP_Training_KC_4S.ipynb              # Neural Network - U-Net Hybrid Training (TP - 4 Step Input)
+│   ├── NN_U-Net_Hybrid_TP_Training_KC_8S.ipynb              # Neural Network - U-Net Hybrid Training (TP - 8 Step Input)
+│   ├── NN_U-Net_Hybrid_Temp_Training_KC_4S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 4 Step Input)
+│   └── NN_U-Net_Hybrid_Temp_Training_KC_8S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 8 Step Input)
+├── requirements.txt                           # Python dependencies (PyTorch, Pandas, etc.)
+└── README.md                                  # Project Description
+```
+
+</details>
 
 ## Dataset Description
 
