@@ -51,6 +51,7 @@ hybrid-weather-forecaster/
 │   ├── NN_U-Net_Hybrid_TP_Training_KC_8S.ipynb              # Neural Network - U-Net Hybrid Training (TP - 8 Step Input)
 │   ├── NN_U-Net_Hybrid_Temp_Training_KC_4S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 4 Step Input)
 │   └── NN_U-Net_Hybrid_Temp_Training_KC_8S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 8 Step Input)
+├── EDA.ipynb                                  # Exploratory Data Analysis
 ├── README.md                                  # Project Description
 └── requirements.txt                           # Python dependencies
 ```
