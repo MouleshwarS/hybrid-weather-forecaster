@@ -1,16 +1,20 @@
+# Note: Please Install the CUDA-enabled PyTorch version first!
+# See README.md for the specific pip install torch --index-url command.
+# Do not uncomment 'torch' below if you want GPU acceleration.
+# torch
+
 # Deep Learning
-torch
 tqdm
 
 # Data Processing & Extraction
 pandas
-xrray
+xarray
 cfgrib
 joblib
 numpy
 
 # Performance Metrics & Visualization
-sklearn
+scikit-learn
 properscoring
 scipy
 tabulate
@@ -18,8 +22,4 @@ matplotlib
 seaborn
 
 # Miscellaneous
-datetime
 sqlalchemy
-typing
-gc
-copy
