@@ -1,0 +1,25 @@
+# Deep Learning
+torch
+tqdm
+
+# Data Processing & Extraction
+pandas
+xrray
+cfgrib
+joblib
+numpy
+
+# Performance Metrics & Visualization
+sklearn
+properscoring
+scipy
+tabulate
+matplotlib
+seaborn
+
+# Miscellaneous
+datetime
+sqlalchemy
+typing
+gc
+copy
