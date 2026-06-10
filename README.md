@@ -16,16 +16,16 @@ Link for PyTorch Installation: https://pytorch.org/get-started/locally/
 ```text
 hybrid-weather-forecaster/
 ├── utils/
-│   ├── Base_Test.py                           # Basic Testing Code
-│   ├── Baseline_Model_Definitions.py          # Baseline Model Definition Code
-│   ├── Baseline_Model_Utils.py                # Baseline Model Training Code
-│   ├── KC_Data_Preprocessing.py               # Data Preprocessing Code
+│   ├── Base_Test.py                           # Basic Testing Modules
+│   ├── Baseline_Model_Definitions.py          # Baseline Model Definitions
+│   ├── Baseline_Model_Utils.py                # Baseline Model Training Modules
 │   ├── Feature_Target_Scaler_RH.ipynb         # Scaling Features and Target - Relative Humidity
 │   ├── Feature_Target_Scaler_TP.ipynb         # Scaling Features and Target - Total Precipitation
 │   ├── Feature_Target_Scaler_Temp.ipynb       # Scaling Features and Target - Temperature
-│   ├── Test_Plot_Codes.py                     # Code for Plotting Test Results
-│   ├── UNet_Model_Definitions.py              # U-Net Model Definition Code
-│   └── UNet_Model_Utils.py                    # U-Net Model Training Code
+│   ├── KC_Data_Preprocessing.py               # Data Preprocessing Module
+│   ├── Test_Plot_Codes.py                     # Test Result Plotting Modules
+│   ├── UNet_Model_Definitions.py              # U-Net Model Definitions
+│   └── UNet_Model_Utils.py                    # U-Net Model Training Module
 ├── training/
 │   ├── ElasticNet_U-Net_Hybrid_RH_Training_KC_4S.ipynb      # Elastic Net - U-Net Hybrid Training (RH - 4 Step Input)
 │   ├── ElasticNet_U-Net_Hybrid_RH_Training_KC_8S.ipynb      # Elastic Net - U-Net Hybrid Training (RH - 8 Step Input)
@@ -51,8 +51,8 @@ hybrid-weather-forecaster/
 │   ├── NN_U-Net_Hybrid_TP_Training_KC_8S.ipynb              # Neural Network - U-Net Hybrid Training (TP - 8 Step Input)
 │   ├── NN_U-Net_Hybrid_Temp_Training_KC_4S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 4 Step Input)
 │   └── NN_U-Net_Hybrid_Temp_Training_KC_8S.ipynb            # Neural Network - U-Net Hybrid Training (Temp - 8 Step Input)
-├── requirements.txt                           # Python dependencies (PyTorch, Pandas, etc.)
-└── README.md                                  # Project Description
+├── README.md                                  # Project Description
+└── requirements.txt                           # Python dependencies
 ```
 
 </details>
