@@ -8,6 +8,10 @@ Link for PyTorch Installation: https://pytorch.org/get-started/locally/
 
 ## Repository Structure
 
+* RH - Relative Humidity
+* Temp - Temperature
+* TP - Total Precipitation
+
 <details>
 <summary><b>Click to expand the repository structure</b></summary>
 
